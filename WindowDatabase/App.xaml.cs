@@ -27,7 +27,6 @@ namespace WindowDatabase
             FileDB.Function.FunctionField.AddConstructor(new ConstructorPoint2D());
             FileDB.Function.FunctionField.AddConstructor(new ConstructorResult());
             base.OnStartup(e);
-            ShowDialog.Info("Запуск программы");
             _listPathDatabase = new ListPathDatabase(Settings.LoadPath());
 
             _entranceRootVM = new EntranceRootViewModel(_listPathDatabase);

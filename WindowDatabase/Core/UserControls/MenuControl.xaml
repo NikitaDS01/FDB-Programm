@@ -13,6 +13,7 @@
     <UserControl.Resources>
         <Style TargetType="Button" BasedOn="{StaticResource DefaultButton}">
             <Setter Property="Margin" Value="4"/>
+            <Setter Property="Background" Value="AntiqueWhite"/>
         </Style>
     </UserControl.Resources>
     <ScrollViewer>

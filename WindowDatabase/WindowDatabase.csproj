@@ -6,12 +6,17 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>IconProgram.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Core\Dialog\OpenDirectoryDialog.cs~RF10111ff.TMP" />
     <None Remove="IconFileDB.png" />
     <None Remove="IconProgram.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="IconProgram.ico" />
   </ItemGroup>
 
   <ItemGroup>
