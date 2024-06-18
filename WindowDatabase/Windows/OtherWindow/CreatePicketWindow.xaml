@@ -1,0 +1,120 @@
+﻿<Window x:Class="WindowDatabase.Windows.OtherWindow.CreatePicketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowDatabase.Windows.OtherWindow"
+        xmlns:uc="clr-namespace:WindowDatabase.Core.UserControls"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Окно пикета" 
+        Height="600" Width="400"
+        MinHeight="450" MinWidth="1080"
+        Style="{StaticResource ColorWindow}"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <uc:ParameterTableControl Title="Название" 
+                                  MaxHeight="120"
+                                  IsReadOnly="{Binding IsReadOnlyName}" 
+                                  Grid.Column="0" Grid.Row="0"
+                                  Grid.ColumnSpan="3"
+                                  InsideText="{Binding Name, Mode=TwoWay}"/>
+        <uc:ParameterTablePointControl Title="Координаты" 
+                                       Grid.Column="0" Grid.Row="1"
+                                       ValueX="{Binding Path=Coordinate.X, Mode=TwoWay}"
+                                       ValueY="{Binding Path=Coordinate.Y, Mode=TwoWay}"/>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="Вид измерения"
+                       Style="{StaticResource ParameterText}"/>
+            <ComboBox Margin="10" MinHeight="52"
+                      SelectedItem="{Binding Path=Type, Mode=TwoWay}">
+                <sys:String>рядовое</sys:String>
+                <sys:String>контрольное</sys:String>
+                <sys:String>опытное</sys:String>
+            </ComboBox>
+        </StackPanel>
+
+        <uc:ParameterTableResultControl Title="Конечный результат" 
+                                       Grid.Column="1" Grid.Row="1"
+                                       ValueResult="{Binding Path=Result.Value, Mode=TwoWay}"
+                                       ValueTime="{Binding Path=Result.Time, Mode=TwoWay}"/>
+        <uc:ParameterTableResultControl Title="Промежут результат" 
+                                       Grid.Column="2" Grid.Row="1"
+                                       ValueResult="{Binding Path=IntermediateResult.Value, Mode=TwoWay}"
+                                       ValueTime="{Binding Path=IntermediateResult.Time, Mode=TwoWay}"/>
+
+        <uc:LinkParameterControl Title="Методика"
+                                 TypeTable="Methodology"
+                                 Grid.Column="0" Grid.Row="3"
+                                 IsButtonEnable="True"
+                                 Path="{Binding LinkM, Mode=TwoWay}"/>
+        <uc:LinkParameterControl Title="Отряд"
+                                 TypeTable="Group"
+                                 Grid.Column="1" Grid.Row="3"
+                                 IsButtonEnable="True"
+                                 Path="{Binding LinkPG, Mode=TwoWay}"/>
+        <uc:LinkParameterControl Title="Набор оборудования"
+                                 TypeTable="EquipmentGroup"
+                                 Grid.Column="2" Grid.Row="3"
+                                 IsButtonEnable="True"
+                                 Path="{Binding LinkEG, Mode=TwoWay}"/>
+        <uc:ParameterTableControl Title="Дата измерений" 
+                                  MaxHeight="120"
+                                  Grid.Column="1" Grid.Row="2"
+                                  Grid.ColumnSpan="2"
+                                  InsideText="{Binding EndResult, Mode=TwoWay}"/>
+
+        <uc:ParameterTableResultControl Title="Трансформанта 1" 
+                                  Grid.Column="3" Grid.Row="0"
+                                  ValueResult="{Binding Path=Transformant_1.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=Transformant_1.Time, Mode=TwoWay}"/>
+        <uc:ParameterTableResultControl Title="Трансформанта 2" 
+                                  Grid.Column="3" Grid.Row="1"
+                                  ValueResult="{Binding Path=Transformant_2.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=Transformant_2.Time, Mode=TwoWay}"/>
+        <uc:ParameterTableResultControl Title="Трансформанта 3" 
+                                  Grid.Column="3" Grid.Row="2"
+                                  ValueResult="{Binding Path=Transformant_3.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=Transformant_3.Time, Mode=TwoWay}"/>
+
+        <uc:ParameterTableResultControl Title="Пр.Трансформанта 1" 
+                                  Grid.Column="4" Grid.Row="0"
+                                  ValueResult="{Binding Path=IntermediateTransformant_1.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=IntermediateTransformant_1.Time, Mode=TwoWay}"/>
+        <uc:ParameterTableResultControl Title="Пр.Трансформанта 2" 
+                                  Grid.Column="4" Grid.Row="1"
+                                  ValueResult="{Binding Path=IntermediateTransformant_2.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=IntermediateTransformant_2.Time, Mode=TwoWay}"/>
+        <uc:ParameterTableResultControl Title="Пр.Трансформанта 3" 
+                                  Grid.Column="4" Grid.Row="2"
+                                  ValueResult="{Binding Path=IntermediateTransformant_3.Value, Mode=TwoWay}"
+                                  ValueTime="{Binding Path=IntermediateTransformant_3.Time, Mode=TwoWay}"/>
+        <Button Grid.Column="0" Grid.Row="4"
+                Content="Сохранить"
+                Command="{Binding SaveCommand}"
+                Margin="2"/>
+        <Button Grid.Column="1" Grid.Row="4"
+                Command="{Binding CloseCommand}"
+                Content="Выйти"
+                Margin="2"/>
+        <Button Grid.Column="3" Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Command="{Binding TransformCommand}"
+                Content="Расчитать трансформант"
+                Margin="2"/>
+    </Grid>
+</Window>

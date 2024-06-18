@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WindowDatabase.Core.UserControls.LinkParameterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowDatabase.Core.UserControls"
+             mc:Ignorable="d" 
+             x:Name="userControlSelf">
+    <UserControl.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Viewbox>
+        <Grid MinWidth="250" MaxWidth="500"
+              Height="100">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtBox" 
+                   Grid.ColumnSpan="2"
+                   Text="{Binding ElementName=userControlSelf, Path=Title}"
+                   Style="{StaticResource ParameterText}" VerticalAlignment="Bottom"/>
+        <TextBox Text="{Binding ElementName=userControlSelf, Path=Path}"
+                 Height="50"
+                     Grid.Column="1" Grid.Row="1"
+                     IsReadOnly="True"
+                     Style="{StaticResource ParameterBox}"
+                     Margin="0,0,5,0" VerticalAlignment="Stretch"/>
+        <Button Grid.Column="0"
+                Grid.Row="1"
+                Margin="5,0,0,0"
+                Width="30"
+                    IsEnabled="{Binding ElementName=userControlSelf, Path=IsButtonEnable}" 
+                    Click="Button_Click" HorizontalAlignment="Right"/>
+    </Grid>
+    </Viewbox>
+</UserControl>

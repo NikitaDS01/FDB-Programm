@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Core\Dialog\OpenDirectoryDialog.cs~RF10111ff.TMP" />
+    <None Remove="IconFileDB.png" />
+    <None Remove="IconProgram.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPOI" Version="2.7.0" />
+    <PackageReference Include="OxyPlot.Core" Version="2.1.2" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.1.2" />
+    <PackageReference Include="OxyPlot.Wpf.Shared" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileDatabase\FileDB.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="IconProgram.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Core\UserControls\ParameterTableResultControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\ContractControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateContractWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

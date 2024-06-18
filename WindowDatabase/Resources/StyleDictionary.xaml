@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+    
+    <Style x:Key="Header" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Background" Value="GhostWhite"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+    
+    <Style x:Key="DefaultButton" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Background" Value="GhostWhite"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="Red"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButton}"/>
+
+    <Style TargetType="Window" x:Key="ColorWindow">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF02688A" Offset="0.062"/>
+                    <GradientStop Color="#FF310946" Offset="0.862"/>
+                    <GradientStop Color="#FF00334E" Offset="0.365"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="GhostWhite"/>
+        <Setter Property="Icon" Value="\IconProgram.png"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="ParameterText">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="MinHeight" Value="50"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="1, 0"/>
+    </Style>
+
+    <Style TargetType="TextBox" x:Key="ParameterBox">
+        <Style.Setters>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Margin" Value="5, 1"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsReadOnly" Value="True">
+                <Setter Property="Background" Value="LightGray"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

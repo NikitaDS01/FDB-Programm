@@ -1,0 +1,19 @@
+﻿<Window x:Class="WindowDatabase.EntranceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowDatabase"
+        xmlns:view ="clr-namespace:WindowDatabase.Page"
+        xmlns:viewModel ="clr-namespace:WindowDatabase.ViewModel"
+        mc:Ignorable="d"
+        Title="Выбор базы данных" 
+        Height="600" Width="500" 
+        MinHeight="600" MinWidth="500"
+        WindowStartupLocation="CenterScreen"
+        Style="{StaticResource ColorWindow}">
+    <Window.Resources>
+        <ResourceDictionary Source="\Resources\TemplateEntranceDictionary.xaml"/>
+    </Window.Resources>
+    <ContentPresenter Content="{Binding CurrentContentVM}"/>
+</Window>

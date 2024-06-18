@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="WindowDatabase.Core.UserControls.ParameterTableControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowDatabase.Core.UserControls"
+             mc:Ignorable="d" 
+             x:Name="customParameterTable">
+    <Viewbox>
+        <StackPanel MinWidth="250"
+                    MaxHeight="100">
+        <TextBlock x:Name="txtBox" 
+                   Text="{Binding ElementName=customParameterTable, Path=Title}"
+                   Style="{StaticResource ParameterText}"/>
+        <TextBox Text="{Binding ElementName=customParameterTable, Path=InsideText}"
+                 Height="50"
+                 IsReadOnly="{Binding ElementName=customParameterTable, Path=IsReadOnly}"
+                 Style="{StaticResource ParameterBox}"/>
+    </StackPanel>
+    </Viewbox>
+</UserControl>

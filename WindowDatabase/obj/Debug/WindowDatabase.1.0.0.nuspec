@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WindowDatabase</id>
+    <version>1.0.0</version>
+    <authors>WindowDatabase</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net7.0-windows7.0">
+        <dependency id="FileDB" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="NPOI" version="2.7.0" exclude="Build,Analyzers" />
+        <dependency id="OxyPlot.Core" version="2.1.2" exclude="Build,Analyzers" />
+        <dependency id="OxyPlot.Wpf" version="2.1.2" exclude="Build,Analyzers" />
+        <dependency id="OxyPlot.Wpf.Shared" version="2.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="G:\Программа\Программирование\FileDatabase\WindowDatabase\bin\Debug\net7.0-windows\WindowDatabase.runtimeconfig.json" target="lib\net7.0-windows7.0\WindowDatabase.runtimeconfig.json" />
+    <file src="G:\Программа\Программирование\FileDatabase\WindowDatabase\bin\Debug\net7.0-windows\WindowDatabase.dll" target="lib\net7.0-windows7.0\WindowDatabase.dll" />
+  </files>
+</package>

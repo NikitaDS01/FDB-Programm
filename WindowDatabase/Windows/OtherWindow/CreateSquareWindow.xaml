@@ -1,0 +1,106 @@
+﻿<Window x:Class="WindowDatabase.Windows.OtherWindow.CreateSquareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowDatabase.Windows.OtherWindow"
+        xmlns:uc="clr-namespace:WindowDatabase.Core.UserControls"
+        mc:Ignorable="d"
+        Title="Окно площадей" 
+        Height="450" Width="400"
+        MinHeight="450" MinWidth="800"
+        Style="{StaticResource ColorWindow}"
+        WindowStartupLocation="CenterScreen">
+    <Grid Grid.Row="2"
+              Grid.Column="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <uc:ParameterTableControl Title="Название" 
+                                  IsReadOnly="{Binding IsReadOnlyName}" 
+                                  Grid.Column="0" Grid.Row="0"
+                                  InsideText="{Binding Name, Mode=TwoWay}"/>
+        <uc:ParameterTableControl Title="Длина периметра" 
+                                  IsReadOnly ="True"
+                                  Grid.Column="1" Grid.Row="0"
+                                  InsideText="{Binding LengthPerimeter, Mode=TwoWay}"/>
+        <uc:ParameterTableControl Title="Знач. площади вокруг" 
+                                  IsReadOnly ="True"
+                                  Grid.Column="1" Grid.Row="1"
+                                  InsideText="{Binding SquareValue, Mode=TwoWay}"/>
+        <uc:LinkParameterControl Title="Супервайзер работ" 
+                                 TypeTable="Supervisor"
+                                 Grid.Column="0" Grid.Row="1"
+                                 Path="{Binding LinkWork, Mode=TwoWay}"/>
+        <uc:LinkParameterControl Title="Супервайзер обр.данных" 
+                                 TypeTable="Supervisor"
+                                 Grid.Column="0" Grid.Row="2"
+                                 Path="{Binding LinkData, Mode=TwoWay}"/>
+
+        <uc:ParameterTableControl Title="Начало работ" 
+                                  Grid.Column="1" Grid.Row="2"
+                                  InsideText="{Binding BeginWork, Mode=TwoWay}"/>
+        <uc:ParameterTableControl Title="Окончание работ" 
+                                  Grid.Column="2" Grid.Row="2"
+                                  InsideText="{Binding EndWork, Mode=TwoWay}"/>
+        <Button Grid.Column="1" Grid.Row="3"
+                Content="Сохранить"
+                Command="{Binding SaveCommand}"
+                Margin="2"/>
+        <Button Grid.Column="2" Grid.Row="3"
+                Command="{Binding CloseCommand}"
+                Content="Выйти"
+                Margin="2"/>
+        <Button Grid.Column="3" Grid.Row="3"
+                Command="{Binding ImportCommand}"
+                Content="Импорт точек"
+                Margin="2"/>
+
+        <Button Grid.Column="2" Grid.Row="0"
+                MaxHeight="100"
+                Content="Вычислить длину"
+                Command="{Binding SumLengthCommand}"
+                Margin="10,30"/>
+        <Button Grid.Column="2" Grid.Row="1"
+                MaxHeight="100"
+                Command="{Binding SumSquareCommand}"
+                Content="Вычислить площадь"
+                Margin="10,30"/>
+
+        <Grid Grid.Row="0" Grid.Column="3"
+              Grid.RowSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.15*"/>
+            </Grid.RowDefinitions>
+
+            <ListBox Grid.ColumnSpan="2"
+                     Margin="3"
+                     ItemsSource="{Binding Points}"/>
+            <TextBox Grid.Row="1" Grid.Column="0"
+                     Margin="10" Text="{Binding PointX}"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Margin="10" Text="{Binding PointY}"/>
+            <Button Content="Добавить"
+                    Grid.Row="2" Grid.Column="0"
+                    Command="{Binding CreatePointCommand}"/>
+            <Button Content="Удалить"
+                    Grid.Row="2" Grid.Column="1"
+                    Command="{Binding DeletePointCommand}"/>
+        </Grid>
+    </Grid>
+</Window>

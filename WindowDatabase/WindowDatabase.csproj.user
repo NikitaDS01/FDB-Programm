@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Core\UserControls\LinkParameterControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Core\UserControls\MenuControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Core\UserControls\NumberParameterControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Core\UserControls\ParameterTableControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Core\UserControls\ParameterTablePointControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\CreateDatabaseControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\EquipmentControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\EquipmentGroupControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\MethodologyControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\PersonalControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\CustomerControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\EntranceControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\PersonalGroupControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\PicketControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\ProfileControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\ProjectsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\SquareControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Page\MainControl\VoidControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\DiscrepanciesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\GraphicWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateArrayPicketWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateCustomerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateEquipmentGroup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateEquipmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateMethodologyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreatePersonalGroupWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreatePersonalWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreatePicketWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateProfileWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateProjectWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\CreateSquareWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\OtherWindow\ListTableRecords.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Core\UserControls\LinkParameterControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Core\UserControls\MenuControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Core\UserControls\NumberParameterControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Core\UserControls\ParameterTableControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Core\UserControls\ParameterTableResultControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Core\UserControls\ParameterTablePointControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\EquipmentControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\EquipmentGroupControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\MethodologyControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\PersonalControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\ContractControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\CustomerControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\PersonalGroupControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\PicketControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\ProfileControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\SquareControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\VoidControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\TemplateEntranceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\CreateDatabaseControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\EntranceControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Page\MainControl\ProjectsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Resources\TemplateMainDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\DiscrepanciesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\GraphicWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateArrayPicketWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateContractWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateEquipmentGroup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateEquipmentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateMethodologyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreatePersonalGroupWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreatePersonalWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreatePicketWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateProfileWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateProjectWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\CreateSquareWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\OtherWindow\ListTableRecords.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

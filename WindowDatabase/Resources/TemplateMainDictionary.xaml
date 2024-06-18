@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view ="clr-namespace:WindowDatabase.Page.MainControl"
+                    xmlns:viewModel ="clr-namespace:WindowDatabase.ViewModel.Component">
+    <DataTemplate DataType="{x:Type viewModel:ViewModelProject}">
+        <view:ProjectsControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelCustomer}">
+        <view:CustomerControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelConctract}">
+        <view:ContractControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelVoid}">
+        <view:VoidControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelSquare}">
+        <view:SquareControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelProfile}">
+        <view:ProfileControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelPicket}">
+        <view:PicketControl/>
+    </DataTemplate>
+
+
+    <DataTemplate DataType="{x:Type viewModel:ViewModelChief}">
+        <view:PersonalControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelWorker}">
+        <view:PersonalControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelEngineer}">
+        <view:PersonalControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelDriver}">
+        <view:PersonalControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelSupervisor}">
+        <view:PersonalControl/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModel:ViewModelMeasuringEquipment}">
+        <view:EquipmentControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelGeneratorEquipment}">
+        <view:EquipmentControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelTelemetryEquipment}">
+        <view:EquipmentControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelEquipmentGroup}">
+        <view:EquipmentGroupControl/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModel:ViewModelPersonalGroup}">
+        <view:PersonalGroupControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewModel:ViewModelMethodology}">
+        <view:MethodologyControl/>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="WindowDatabase.Page.MainControl.ProjectsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowDatabase.Page"
+             xmlns:uc="clr-namespace:WindowDatabase.Core.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1080"
+             x:Name="userControlSelf">
+    <UserControl.Resources>
+        <Style TargetType="Button" BasedOn="{StaticResource DefaultButton}">
+            <Setter Property="Margin" Value="4"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <uc:MenuControl Grid.Row="1"/>
+        <TextBlock Style="{StaticResource Header}"
+                   Text="{Binding Path=Name, StringFormat='База данных - {0} ( Проекты )'}"
+                   Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Background="Black">
+            <Button Content="Добавить"
+                    Command="{Binding AddCommand}"/>
+            <Button Content="Изменить"
+                    Command="{Binding ChangeCommand}"/>
+            <Button Content="Удалить"
+                    Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+        <ListBox Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="10"
+                 ItemsSource="{Binding Items}"
+                 SelectedItem="{Binding SelectedItem}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="5" Orientation="Horizontal">
+                        <Button Content="Открыть"
+                                Command="{Binding ElementName=userControlSelf, Path=DataContext.OpenCommand}"
+                                CommandParameter="{Binding Path=Name}"/>
+                        <TextBlock Text="{Binding Path=Name}"
+                                   FontSize="18"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Grid Grid.Row="2"
+              Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <uc:ParameterTableControl Title="Название" 
+                                      IsReadOnly="True" Grid.Column="0" Grid.Row="0"
+                                      InsideText="{Binding Path=SelectedItem.Name}"/>
+            <uc:ParameterTableControl Title="Договор" 
+                                      IsReadOnly="True" Grid.Column="1" Grid.Row="0"
+                                      InsideText="{Binding Path=SelectedItem.Contract}"/>
+            <uc:ParameterTableControl Title="Заказчик" 
+                                      IsReadOnly="True" Grid.Column="2" Grid.Row="0"
+                                      InsideText="{Binding Path=SelectedItem.Customer}"/>
+
+            <uc:ParameterTableControl Title="Создание записи" 
+                                      IsReadOnly="True" Grid.Column="2" Grid.Row="1"
+                                      InsideText="{Binding Path=SelectedItem.CreateRecord}"/>
+            <uc:ParameterTableControl Title="Изменения записи" 
+                                      IsReadOnly="True" Grid.Column="3" Grid.Row="1"
+                                      InsideText="{Binding Path=SelectedItem.UpdateRecord}"/>
+        </Grid>
+    </Grid>
+</UserControl>

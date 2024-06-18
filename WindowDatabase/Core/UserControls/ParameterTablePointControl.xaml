@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="WindowDatabase.Core.UserControls.ParameterTablePointControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WindowDatabase.Core.UserControls"
+             mc:Ignorable="d" 
+             x:Name="userControlSelf">
+    <Viewbox>
+        <Grid Margin="10" MinWidth="250" MaxWidth="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtBox" 
+                   Grid.ColumnSpan="2"
+                   Text="{Binding ElementName=userControlSelf, Path=Title}"
+                   Style="{StaticResource ParameterText}"/>
+        <TextBox Text="{Binding ElementName=userControlSelf, Path=ValueX}"
+                 Height="50"
+                 IsReadOnly="{Binding ElementName=userControlSelf, Path=IsReadOnly}"
+                 Grid.Column="0" Grid.Row="1"
+                 Style="{StaticResource ParameterBox}"/>
+        <TextBox Text="{Binding ElementName=userControlSelf, Path=ValueY}"
+                 Height="50"
+                 IsReadOnly="{Binding ElementName=userControlSelf, Path=IsReadOnly}"
+                 Grid.Column="1" Grid.Row="1"
+                 Style="{StaticResource ParameterBox}"/>
+    </Grid>
+    </Viewbox>
+</UserControl>
